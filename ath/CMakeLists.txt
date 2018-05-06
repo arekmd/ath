@@ -19,4 +19,10 @@ file(GLOB HEADERS
 add_library(ath SHARED ${SOURCE} ${HEADERS})
 
 install(TARGETS ath LIBRARY DESTINATION lib)
-install(FILES "${ath_SOURCE_DIR}/*.h" DESTINATION "include/ath")
+
+
+#install(DIRECTORY "${ath_SOURCE_DIR}" DESTINATION "include" FILES_MATCHING PATTERN "*.h")
+
+
+install(FILES "${ath_SOURCE_DIR}/at.h" DESTINATION "include/ath")
+install(FILES "${ath_SOURCE_DIR}/range.h" DESTINATION "include/ath")
