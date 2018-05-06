@@ -70,4 +70,9 @@ void at_return_operation_not_allowed_error(struct at_function_result *r);
 void at_add_unsolicited(struct at_context_t *ctx, const char *prefix, const char *text);
 void at_add_unsolicited_line(struct at_context_t *ctx, const char *text);
 
+void at_append_line(struct at_context_t *ctx, const char *text);
+void at_append_int(struct at_context_t *ctx, int value);
+void at_append_text(struct at_context_t *ctx, const char *text);
+void at_append_char(struct at_context_t *ctx, unsigned char c);
+
 #endif

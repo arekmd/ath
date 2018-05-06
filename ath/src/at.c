@@ -58,7 +58,7 @@ void at_append_char(struct at_context_t *ctx, unsigned char c){
    *ctx->outputbuff_iterator++ = c;
 }
 
-static void at_append_text(struct at_context_t *ctx, const char *text){
+void at_append_text(struct at_context_t *ctx, const char *text){
    while (*text != 0) {
       at_append_char(ctx, *text++);
    }
