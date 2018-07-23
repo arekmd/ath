@@ -1,8 +1,27 @@
 #include <gtest/gtest.h>
 
+#include <vector>
+
 extern "C" {
    #include "at.h"
    #include "at_internal.h"
+}
+
+TEST(at_test, ptr_test) {
+
+   std::vector<char> v;
+   v.resize(10);
+
+   char *begin = &*v.begin();
+   char *end = begin + v.size();
+
+
+   std::fill(begin, end, 1);
+
+
+   ASSERT_TRUE(begin != nullptr);
+
+
 }
 
 int test_24_out_calls = 0;
