@@ -18,9 +18,7 @@ TEST(at_test, ptr_test) {
 
    std::fill(begin, end, 1);
 
-
    ASSERT_TRUE(begin != nullptr);
-
 
 }
 

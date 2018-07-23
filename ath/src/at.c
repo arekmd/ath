@@ -117,7 +117,7 @@ void at_invalid_chars_error(struct at_function_result *r) {
 
 void at_unknown_error(struct at_function_result *r) {
    r->code = 100;
-   r->detailed = "Unkown error";
+   r->detailed = "Unknown error";
    r->result = false;
 }
 
@@ -208,8 +208,6 @@ static void at_cmee_buildin_assignment(
    at_return_operation_not_supported_error(r);
    return;
 }
-
-
 
 void at_command_free(struct at_command_register_t *c){
 

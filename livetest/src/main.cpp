@@ -2,7 +2,7 @@
 #include <iostream>
 
 extern "C" {
-#include "at.h"
+    #include "at.h"
 }
 
 
@@ -26,12 +26,11 @@ int main (int argc, char **args) {
 
    at_command_add(context, "+exit", AT_STANDALONE_COMMAND, exit);
 
-
    at_add_unsolicited_line(context, "+POWERON");
-
    at_add_unsolicited(context, "STATUS", "BOOTING");
 
    while (true) {
+
       uint8_t c = getchar();
 
       if (c == 10)
@@ -40,8 +39,6 @@ int main (int argc, char **args) {
       range_t r;
       r.begin = &c;
       r.end = r.begin + 1;
-
-
 
       at_process_input(context, &r);
 
